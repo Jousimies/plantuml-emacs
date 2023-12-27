@@ -134,7 +134,7 @@ HEADLINE org headline obj."
       (make-directory (file-truename plantuml-relative-path))))
   (format "%s%s.%s"
           (file-truename plantuml-relative-path)
-          (file-name-sans-extension (buffer-name))
+          (file-name-base (buffer-file-name))
           plantuml-output-type))
 
 (defun plantuml--build-source (type content)
